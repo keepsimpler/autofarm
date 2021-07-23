@@ -9,8 +9,9 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/kit": "next",
+    "@beyonk/svelte-mapbox": "^8.1.1",
     "@sveltejs/adapter-vercel": "next",
+    "@sveltejs/kit": "next",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-svelte3": "^3.2.0",
