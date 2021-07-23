@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon备份</title>
+    <defs>
+        <filter color-interpolation-filters="auto" id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.200000 0 0 0 0 0.200000 0 0 0 0 0.200000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="详情页" transform="translate(-152.000000, -2274.000000)">
+            <g id="服务与报价" transform="translate(152.000000, 1765.000000)">
+                <g id="icon备份" transform="translate(0.000000, 509.000000)" filter="url(#filter-1)">
+                    <g id="编组-6" transform="translate(5.000000, 5.000000)">
+                        <rect id="矩形" fill="#333333" x="1" y="7" width="20" height="1.47" rx="0.735"></rect>
+                        <path d="M18.8571429,0 L3.14285714,0 C1.40710507,0 0,1.40710507 0,3.14285714 L0,18.8571429 C0,20.5928949 1.40710507,22 3.14285714,22 L18.8571429,22 C20.5928949,22 22,20.5928949 22,18.8571429 L22,3.14285714 C22,1.40710507 20.5928949,0 18.8571429,0 Z M3.14285714,1.57142857 L18.8571429,1.57142857 C19.7250189,1.57142857 20.4285714,2.27498111 20.4285714,3.14285714 L20.4285714,18.8571429 C20.4285714,19.7250189 19.7250189,20.4285714 18.8571429,20.4285714 L3.14285714,20.4285714 C2.27498111,20.4285714 1.57142857,19.7250189 1.57142857,18.8571429 L1.57142857,3.14285714 C1.57142857,2.27498111 2.27498111,1.57142857 3.14285714,1.57142857 Z" id="Rectangle" fill="#595959" fill-rule="nonzero"></path>
+                        <rect id="矩形备份" fill="#333333" x="1" y="14" width="20" height="1.47" rx="0.735"></rect>
+                        <rect id="矩形" fill="#333333" x="7" y="1" width="1.47" height="21" rx="0.735"></rect>
+                        <rect id="矩形备份-2" fill="#333333" x="13.4" y="1" width="1.47" height="21" rx="0.735"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
