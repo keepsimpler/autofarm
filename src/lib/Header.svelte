@@ -2,7 +2,7 @@
     <div class="col">
         <h1>
             <a href="/">
-                <img class="logo-image" src="/static/images/logo.png" alt="Spacebay">
+                <img class="logo-image" src="/images/logo.png" alt="Spacebay">
             </a>
         </h1>
     </div>

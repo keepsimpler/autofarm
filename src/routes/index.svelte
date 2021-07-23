@@ -7,7 +7,7 @@
 <!-- <div class="container-fluid px-0 pt-3 d-flex flex-column align-items-center"> -->
     <div id="search" class="row no-gutters mt-1">
         <div class="col d-flex justify-content-center position-relative">
-            <img class="intro-image" src="/static/images/intro.png" alt="Find a space in the world">
+            <img class="intro-image" src="/images/intro.png" alt="Find a space in the world">
             <h2 class="position-absolute">Find a space in the world</h2>
             <div class="position-absolute search-wrap">
                 <div class="search-title">
@@ -15,11 +15,11 @@
                     <span class="ml-5 title active pointer">按亚马逊</span>
                 </div>
                 <div class="search-content mb-3">
-                    <img src="/static/images/position.svg" class="ml-2" alt="">
+                    <img src="/images/position.svg" class="ml-2" alt="">
                     <input class="ml-3 border-0" placeholder="请输入城市名称"/>
                     <div class="icon-bg rounded-circle ml-auto pointer">
 						<a href="/list">
-							<img src="/static/images/search.svg" alt="">
+							<img src="/images/search.svg" alt="">
 						</a>
 					</div>
                 </div>

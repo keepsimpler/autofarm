@@ -2,16 +2,16 @@
     <div class="row no-gutters">
         <ul class="mb-0">
             <li>
-                <a href="#/">关于Spacebay</a>
+                <a href="/">关于Spacebay</a>
             </li>
             <li>
-                <a href="#/">服务条款</a>
+                <a href="/">服务条款</a>
             </li>
             <li>
-                <a href="#/">申请收录</a>
+                <a href="/">申请收录</a>
             </li>
             <li>
-                <a href="#/">联系我们</a>
+                <a href="/">联系我们</a>
             </li>
         </ul>
         <div class="ml-auto">

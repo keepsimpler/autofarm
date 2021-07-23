@@ -1,6 +1,6 @@
 <svelte:head>
-    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </svelte:head>
 
 <script>
@@ -17,20 +17,20 @@
                 <div class="text">6836条记录</div>
                 <div class="select-box pointer">
                     <div>仓库面积不限</div>
-                    <div class="ml-auto"><img src="/static/images/down.svg" alt=""></div>
+                    <div class="ml-auto"><img src="/images/down.svg" alt=""></div>
                 </div>
                 <div class="select-box pointer">
                     <div>仓库价格不限</div>
-                    <div class="ml-auto"><img src="/static/images/down.svg" alt=""></div>
+                    <div class="ml-auto"><img src="/images/down.svg" alt=""></div>
                 </div>
                 <div class="select-box pointer" style="width: 7.25rem">
                     <div>更多</div>
-                    <div class="ml-auto"><img src="/static/images/down.svg" alt=""></div>
+                    <div class="ml-auto"><img src="/images/down.svg" alt=""></div>
                 </div>
 
                 <div class="select-box active position-relative d-none"><!-- 选择后selectbox样式-->
                     <div>仓库面积不限</div>
-                    <div class="ml-auto"><img src="/static/images/up.svg" alt=""></div>
+                    <div class="ml-auto"><img src="/images/up.svg" alt=""></div>
                     <div class="select-show position-absolute">
                         <div class="select-content">仓库面积不限</div>
                         <div class="select-content">0-5000㎡</div>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="select-box active position-relative d-none" style="width: 7.25rem"><!-- 选择后selectbox样式-->
                     <div>更多</div>
-                    <div class="ml-auto"><img src="/static/images/up.svg" alt=""></div>
+                    <div class="ml-auto"><img src="/images/up.svg" alt=""></div>
                     <div class="select-show position-absolute pb-0">
                         <div class="custom-control custom-checkbox ml-3 mb-3 mt-2">
                             <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -80,8 +80,8 @@
                             <p class="card-text">{warehouse.name}</p>
                             <p class="price-text">CAD {warehouse.price}/㎡·天</p>
                             <p class="location-text d-flex flex-row"><span class="d-flex align-items-center mr-1">
-                                <img src="/static/images/location.svg" alt="">{warehouse.address}</span><span
-                                    class="d-flex align-items-center ml-3"><img src="/static/images/square.svg" alt="">{warehouse.area}㎡</span>
+                                <img src="/images/location.svg" alt="">{warehouse.address}</span><span
+                                    class="d-flex align-items-center ml-3"><img src="/images/square.svg" alt="">{warehouse.area}㎡</span>
                             </p>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
             <div class="mt-auto d-flex flex-row justify-content-center w-100">
                 <div class="d-flex flex-row align-items-center mb-3">
                     <div class="page-no-bg">
-                        <img src="/static/images/left.svg" alt="">
+                        <img src="/images/left.svg" alt="">
                     </div>
                     <div class="page-no ml-3 page-no-active">1</div>
                     <div class="page-no ml-3">2</div>
@@ -104,7 +104,7 @@
                     <div class="ml-3">...</div>
                     <div class="page-no ml-3">10</div>
                     <div class="page-no-bg ml-3">
-                        <img src="/static/images/right.svg" alt="">
+                        <img src="/images/right.svg" alt="">
                     </div>
                     <div class="ml-3">跳至</div>
                     <div class="page-no-box ml-3"><input type="number" class="border-0 text-center"></div>
