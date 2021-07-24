@@ -5,6 +5,7 @@
     <a href="/test/search">Search</a>
     <a href="/test/card">Card</a>
     <a href="/test/leaflet">Leaflet</a>
+    <a href="/test/beyonkMapbox">Beyonk Mapbox</a>
     <a href="/test/header2">Header for List Page</a>
     <a href="/test/selectMenu">Select Menu</a>
 </div>

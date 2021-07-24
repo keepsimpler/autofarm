@@ -1,16 +1,62 @@
-<svelte:head>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-</svelte:head>
 
 <script>
-    import Card from '$lib/Card.svelte';
+
+    import { mapboxToken } from "$lib/conf.js";
+	import { Map, Geocoder, Marker, controls } from "$lib/components.js";
+  
+	const { GeolocateControl, NavigationControl } = controls;
+	const place = null;
+  
+	let page = "about";
+	let center = { lat: 53.3358627, lng: -2.8572362 };
+	let marker = center;
+	let zoom = 11.15;
+	let mapComponent;
+  
+	function placeChanged(e) {
+	  const { result } = e.detail;
+	  mapComponent.setCenter(result.center, 14);
+	}
+  
+	function recentre({ detail }) {
+	  center = detail.center;
+	}
+  
+	function drag({ detail }) {
+	  marker = detail.center;
+	}
+
+    // import Card from '$lib/Card.svelte';
     import LeafletMap from '$lib/LeafletMap.svelte';
 
     import { warehouses } from '../data.js';
 </script>
 
 <!-- <div class="container-fluid px-0 pt-3 d-flex flex-column align-items-center"> -->
+    <div class="row no-gutters mt-1 mb-3 header">
+        <div class="col">
+            <h1>
+                <a href="/">
+                    <img class="logo-image" src="/images/logo.png" alt="Spacebay">
+                </a>
+            </h1>
+        </div>
+        <div class="col d-flex align-items-center">
+            <!-- <div class="list-search"> -->
+                <Geocoder
+                accessToken={mapboxToken}
+                on:result={placeChanged}
+                on:clear={() => mapComponent.setCenter({ lng: 0, lat: 0 })}
+              />
+
+                <!-- <div  class="ml-3 border-0" placeholder="多伦多市，安大略省，加拿大"> </div> -->
+                <!-- <div class="icon-bg rounded-circle ml-auto pointer mr-0"><img src="/images/search.svg" alt=""></div> -->
+            <!-- </div> -->
+    
+        </div>
+    
+    </div>
+
     <div id="select" class="select-wrap">
         <div class="row no-gutters">
             <div class="col d-flex align-items-center">
@@ -68,7 +114,7 @@
 
     </div>
     <div id="list" class="row no-gutters w-100">
-        <div class="col-7 pb-4">
+        <div class="col-5 pb-4">
             <div class="row no-gutters p-4 mt-3 w-100">
                 {#each warehouses as warehouse}
                 <div class="col-6 no-gutters d-flex justify-content-center">
@@ -112,11 +158,39 @@
                 </div>
             </div>
         </div>
-        <div class="col-5 ">
-            <LeafletMap></LeafletMap>
+        <div class="col-7">
+            <div class="map-wrap">
+				<Map
+				  bind:this={mapComponent}
+				  accessToken={mapboxToken}
+				  on:recentre={recentre}
+				  on:drag={drag}
+				  {center}
+				  bind:zoom
+				>
+				  <NavigationControl />
+				  <GeolocateControl
+					on:geolocate={(e) => console.log("geolocated", e.detail)}
+				  />
+				  <Marker lat={center.lat} lng={center.lng} label="M-Kite加拿大海外仓" />
+				  <Marker lat={center.lat+0.01} lng={center.lng+0.01} label="安美集团加拿大海外仓" />
+				  <Marker lat={center.lat+0.01} lng={center.lng-0.01} label="中南通达加拿大仓" />
+				  <Marker lat={center.lat-0.01} lng={center.lng+0.01} label="乐天速递加拿大海外仓" />
+				  <Marker lat={center.lat-0.01} lng={center.lng-0.01} label="千亚国际加拿大海外仓" />
+				</Map>
+			  </div>
         </div>
 
     </div>
 <!-- </div> -->
 
 
+<style>
+
+	.map-wrap {
+	  width: 100%;
+	  height: 800px;
+	}
+  
+  </style>
+  
