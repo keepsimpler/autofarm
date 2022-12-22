@@ -57,7 +57,7 @@ Each plant is in healthy status or in disease such as scab, rot, rust, and so on
 unsafe_allow_html=True
 )
 
-df = pd.read_csv('plantvillage/cls_count.csv')
+df = pd.read_csv('data/plantvillage/cls_count.csv')
 # df = df.drop(columns=['cls'])
 grid_options = {
     "columnDefs": [
@@ -110,7 +110,7 @@ n_rows = int(1 + n_pics // n_cols)
 rows = [st.columns(n_cols) for _ in range(n_rows)]
 cols = [col for row in rows for col in row]
 
-root_dir = "plantvillage"
+root_dir = "data/plantvillage/"
 samples = []
 classes = os.listdir(root_dir)
 for cls in classes:
@@ -121,5 +121,5 @@ for cls in classes:
             samples.append((img_path, cls))
 
 for col, (img, cls) in zip(cols, samples[st.session_state['seed']::3]):
-    # col.caption(cls)
+    col.caption(cls.split('___')[0])
     col.image(img)
