@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from st_aggrid import AgGrid
+# from st_aggrid import AgGrid
 import os
 
 st.set_page_config(
@@ -58,16 +58,18 @@ unsafe_allow_html=True
 )
 
 df = pd.read_csv('data/plantvillage/cls_count.csv')
+st.dataframe(df[['crop', 'disease', 'count']], width=1000)
 # df = df.drop(columns=['cls'])
-grid_options = {
-    "columnDefs": [
-        { "field": 'crop', "headName": "Crop", "rowGroup": True, "hide": True},
-        { "field": 'disease', "headName": "Disease"},
-        { "field": 'count', "headName": "Number of Images", "sortable": True},
-    ],
-}
+# grid_options = {
+#     "columnDefs": [
+#         { "field": 'crop', "headName": "Crop", "rowGroup": True, "hide": True},
+#         { "field": 'disease', "headName": "Disease"},
+#         { "field": 'count', "headName": "Number of Images", "sortable": True},
+#     ],
+# }
 
-df_aggrid = AgGrid(df, grid_options, height=450, allow_unsafe_jscode=False, fit_columns_on_grid_load=True)['data']
+
+# df_aggrid = AgGrid(df, grid_options, height=450, allow_unsafe_jscode=False, fit_columns_on_grid_load=True)['data']
 
 st.markdown(
 """
